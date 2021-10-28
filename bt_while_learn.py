@@ -79,6 +79,7 @@ while True:
         break
 t.done()
 '''
+'''
 #### vẽ xoắn ốc
 d=int(input())
 t.left(90)
@@ -86,4 +87,29 @@ while t.distance(0,0)<1000:
     t.circle(d,100)
     d+=5
 t.done
+t.mainloop()
+'''
+
+
+### vẽ hình elip và các elip lồng nhau
+col=['violet','blue','green','yellow',
+     'orange','red']
+r=70
+val=10
+i=0
+t.speed(100)
+while True:
+    t.seth(-val)
+    # chọn màu cho elip
+    t.color(col[i])
+    if i==5:
+        i=0
+    else:
+        i+=1
+    ## vẽ elip
+    for k in range(2):
+        t.circle(r,90)
+        t.circle(r/2,90)
+    val+=10
+
 t.mainloop()
